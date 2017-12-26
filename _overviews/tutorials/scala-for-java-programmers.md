@@ -635,7 +635,7 @@ inferiority, as follows. It makes use of another predefined method,
 
     def <(that: Any): Boolean = {
       if (!that.isInstanceOf[Date])
-        error("cannot compare " + that + " and a Date")
+        sys.error("cannot compare " + that + " and a Date")
 
       val o = that.asInstanceOf[Date]
       (year < o.year) ||
